@@ -92,4 +92,4 @@ prediction = response.json()["prediction"]
 if float(prediction) > 0.6:
     st.success(f'Based on the provided data, you have a {float(prediction)*100}% chance of having a cardiovascular disease. You should visit a doctor, do more sport, quit smoking and alcohol, and do regular check-ups.')
 else:
-    st.info(f'Based on the provided data, you have a {float(prediction)*100}% chance of having a cardiovascular disease. You are fine.')
+    st.info(f'Based on the provided data, you have a {float(prediction)*100}% chance of having a cardiovascular disease.')
