@@ -85,11 +85,11 @@ params =  f"age={age_in_days}&gender={gender}&height={height}&weight={weight}&ap
 
 
 response = requests.get(url + params)
-#st.write(response.json())
+
 
 prediction = response.json()["prediction"]
 
 if float(prediction) > 0.6:
-    st.success(f'Based on the provided data, you have a {float(prediction)*100}% chance of having a cardiovascular disease. You should visit a doctor, do more sport, quit smoking and alcohol, and do regular check-ups.')
+    st.success(f'Based on the provided data, you have a {float(prediction) * 100:.2f}% chance of having a cardiovascular disease. You should visit a doctor, do more sport, quit smoking and alcohol, and do regular check-ups.')
 else:
-    st.info(f'Based on the provided data, you have a {float(prediction)*100}% chance of having a cardiovascular disease.')
+    st.info(f'Based on the provided data, you have a {float(prediction) * 100:.2f}% chance of having a cardiovascular disease.')
