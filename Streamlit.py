@@ -40,7 +40,7 @@ if cholesterol == '1: normal':
 elif cholesterol == '2: above normal':
     cholesterol = 2
 else:
-    gluc = 3
+    cholesterol = 3
 
  
 gluc = st.selectbox(
